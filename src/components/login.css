@@ -1,0 +1,33 @@
+.login-container{
+    height: 100vh;
+    background-color: #f2f2f2
+}
+.login-container .container-fluid{
+    padding-top: 7rem;
+}
+.container-fluid form{
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.login-button{
+    width: 100%;
+    border: none;
+    border-radius: 40px;
+    height: 45px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.signup-button{
+    width: 100%;
+    border: none;
+    border-radius: 40px;
+    height: 45px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.login-container h2,h5{
+    text-align: center;
+}
