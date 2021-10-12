@@ -34,7 +34,7 @@ let Home = () => {
 
   return (
     <>
-      {user ? "" : <Redirect to="/login" />}
+      {user ? "" : <Redirect to="/" />}
 
       <div className="video-container">
         {posts.map((el) => {

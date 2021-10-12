@@ -5,7 +5,7 @@
 .login-container .container-fluid{
     padding-top: 7rem;
 }
-.container-fluid form{
+.container-fluid .login-form{
     padding: 2rem;
     background-color: #fff;
     border-radius: 10px;

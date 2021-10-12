@@ -7,29 +7,28 @@ let Login = () => {
   let user = useContext(authContext);
 
   return (
-    <>
-      {user ? <Redirect to="/" /> : ""}
+    <div>
+      {user ? <Redirect to="/home" /> : ""}
       <div className="login-container">
         <div className="container-fluid">
-          <form className="col-xl-3 col-lg-3 col-md-6 col-sm-12 mx-auto">
-          <h2>WELCOME!!</h2>
-          <br/>
-          <h5>Login to continue</h5>
-          <br/>
-          <div className="mb-4 mt-4">
-            <button
-              onClick={() => {
-                signInWithGoogle();
-              }}
-              className="btn btn-primary login-button"
-            >
-              LOGIN WITH GOOGLE
-            </button>
+          <div className="col-xl-3 col-lg-3 col-md-6 col-sm-12 mx-auto login-form">
+            <h2>WELCOME!!</h2>
+            <br />
+            <h5>Login to continue</h5>
+            <br />
+            <div className="mb-4 mt-4">
+              <button
+                onClick={signInWithGoogle}
+                type="submit"
+                className="btn btn-primary login-button"
+              >
+                Login With Google
+              </button>
+            </div>
           </div>
-          </form>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

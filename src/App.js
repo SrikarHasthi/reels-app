@@ -7,16 +7,16 @@ let App = () => {
   return (
     <>
       <AuthProvider>
-        <Router >
+        <Router>
           <Switch>
-            <Route path="/login">
-              <Login />
-            </Route>
             <Route path="/profile">
               <Profile />
             </Route>
-            <Route path="/">
+            <Route path="/home">
               <Home />
+            </Route>
+            <Route path="/">
+              <Login />
             </Route>
           </Switch>
         </Router>
