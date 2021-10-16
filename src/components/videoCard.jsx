@@ -89,16 +89,20 @@ let VideoCard = (props) => {
             })}
           </div>
           <div className="comment-form">
-            {/* jobhi mai input tag me likhunga wo meri state me save hota rahega  */}
             <input
               type="text"
               value={currUserComment}
-              onChange={(e) => {
+              onChange={(e) => {                
                 setCurrUserComment(e.currentTarget.value);
               }}
             />
             <button
               onClick={async () => {
+                currUserComment = currUserComment.replace(/^\s+/, "").replace(/\s+$/, "");
+                if(currUserComment===""){
+                  alert("Comment cannot be empty")
+                }
+                else{
                 //jo current comment state me hai use comments collection me add kr rha hu
                 let docRef = await firestore.collection("comments").add({
                   name: user.displayName,
@@ -126,7 +130,7 @@ let VideoCard = (props) => {
                 await firestore.collection("posts").doc(props.data.id).update({
                   comments: postCommentsArr,
                 });
-              }}
+              }}}
             >
               Post
             </button>

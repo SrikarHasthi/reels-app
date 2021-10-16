@@ -81,6 +81,7 @@
 }
 
 .actual-comments {
+  overflow: auto;
   height: 90%;
 }
 
